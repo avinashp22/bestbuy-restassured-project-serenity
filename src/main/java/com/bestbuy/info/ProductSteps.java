@@ -75,5 +75,4 @@ public class ProductSteps {
                 .delete(Path.PRODUCTS + EndPoints.DELETE_PRODUCT_BY_ID)
                 .then();
     }
-
 }
