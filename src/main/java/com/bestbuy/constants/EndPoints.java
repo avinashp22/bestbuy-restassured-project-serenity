@@ -1,21 +1,23 @@
 package com.bestbuy.constants;
 
-/**
- * Created by Jay
- */
 public class EndPoints {
 
-    /**
-     * This is Endpoints of student api
-     */
-    public static final String GET_ALL_STUDENT = "/list";
-    public static final String GET_SINGLE_STUDENT_BY_ID = "/{studentID}";
-    public static final String UPDATE_STUDENT_BY_ID = "/{studentID}";
-    public static final String DELETE_STUDENT_BY_ID = "/{studentID}";
 
-    /**
-     * This is Endpoints of Authentication api
-     */
-    public static final String AUTHENTICATE = "/api";
+
+    public static final String CREATE_PRODUCT = "/products";
+    public static final String GET_SINGLE_PRODUCT_BY_ID = "/{productID}";
+    public static final String UPDATE_PRODUCT_BY_ID = "/{productID}";
+    public static final String DELETE_PRODUCT_BY_ID = "/{productID}";
+
+
+
+
+    public static final String CREATE_STORES ="/stores";
+    public static final String GET_SINGLE_STORE_BY_ID = "/{storeID}";
+    public static final String UPDATE_STORE_BY_ID = "/{storeID}";
+    public static final String DELETE_STORE_BY_ID = "/{storeID}";
+
+
+
 
 }

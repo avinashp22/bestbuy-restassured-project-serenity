@@ -1,7 +1,5 @@
 package com.bestbuy.model;
 
-import java.util.HashMap;
-
 public class StorePojo {
 
     private String name;
@@ -14,7 +12,7 @@ public class StorePojo {
     private double lng;
     private double lat;
     private String hours;
-    private HashMap<String, Object> services;
+
 
     public String getName() {
         return name;
@@ -96,11 +94,7 @@ public class StorePojo {
         this.hours = hours;
     }
 
-    public HashMap<String, Object> getServices() {
-        return services;
-    }
 
-    public void setServices(HashMap<String, Object> services) {
-        this.services = services;
-    }
+
+
 }

@@ -5,28 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d65e239d-158b-4130-a721-64183917d2a9" name="Changes" comment="bestbuy-restassured-project-serenity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/EndPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/Path.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/ProductSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/StoreSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/ProductPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/StorePojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/utils/PropertyReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/utils/TestUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bestbuy/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/bestbuy/info/ProductsCRUDTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/bestbuy/info/StoresCRUDTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/StoreTestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/EndPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/EndPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/constants/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/ProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/StoreSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/info/StoreSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/ProductPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/ProductPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/StorePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bestbuy/model/StorePojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/info/CreateStudentDataDrivenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/info/FirstSerenityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/info/StudentCURDTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/info/StudentCURDTestWithSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/info/TagsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/testbase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bestbuy/testbase/ProductTestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/propertyfile/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/propertyfile/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bGQBYlCrEWp4aEkg0eviW7raqq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,25 +49,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Wilton/IdeaProjects/bestbuy-restassured-project-serenity/src/main/java/com/bestbuy/model",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Wilton/IdeaProjects/bestbuy-restassured-project-serenity/src/test/java/com/bestbuy/testbase/info&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\test\java\com\bestbuy\testbase\info" />
+      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\test\java\com\bestbuy\testbase" />
+      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\test\java\com\bestbuy" />
+      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\test" />
       <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\main\java\com\bestbuy\model" />
-      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity\src\main\java\com\bestbuy" />
-      <recent name="C:\Users\Wilton\IdeaProjects\bestbuy-restassured-project-serenity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bestbuy.info" />
     </key>
+  </component>
+  <component name="RunManager" selected="Maven.bestbuy-runner">
+    <configuration name="ProductsCRUDTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bestbuy-restassured-project-serenity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bestbuy.info.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bestbuy.info" />
+      <option name="MAIN_CLASS_NAME" value="com.bestbuy.info.ProductsCRUDTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoresCRUDTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bestbuy-restassured-project-serenity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bestbuy.info.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bestbuy.info" />
+      <option name="MAIN_CLASS_NAME" value="com.bestbuy.info.StoresCRUDTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StoresCRUDTest" />
+        <item itemvalue="JUnit.ProductsCRUDTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705837899863</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bestbuy-restassured-project-serenity">
+      <option name="closed" value="true" />
+      <created>1705839586721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705839586721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bestbuy-restassured-project-serenity">
+      <option name="closed" value="true" />
+      <created>1705840218190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705840218190</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

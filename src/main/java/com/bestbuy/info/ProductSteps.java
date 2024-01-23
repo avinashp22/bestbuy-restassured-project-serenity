@@ -1,85 +1,87 @@
 package com.bestbuy.info;
 
-import com.studentapp.constants.EndPoints;
-import com.studentapp.model.StudentPojo;
+import com.bestbuy.constants.EndPoints;
+import com.bestbuy.constants.Path;
+import com.bestbuy.model.ProductPojo;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.rest.SerenityRest;
 
 import java.util.HashMap;
-import java.util.List;
 
-/**
- * Created by Jay
- */
+
 public class ProductSteps {
 
-    @Step("Creating student with firstName : {0}, lastName : {1}, email : {2}, programme : {3} and courses : {4}")
-    public ValidatableResponse createStudent(String firstName, String lastName, String email, String programme,
-                                             List<String> courseList) {
-        StudentPojo studentPojo = new StudentPojo();
-        studentPojo.setFirstName(firstName);
-        studentPojo.setLastName(lastName);
-        studentPojo.setEmail(email);
-        studentPojo.setProgramme(programme);
-        studentPojo.setCourses(courseList);
+    @Step("Create new product with name: {0}, type: {1}, price: {2}, upc: {3}, shipping: {4}, description: {5}," +
+            " manufacturer: {6}, model: {7}, image: {8}, url: {9}")
+    public ValidatableResponse createProduct(String name, String type, double price, String upc, int shipping,
+                                             String description, String manufacturer, String model, String image, String url) {
+
+        ProductPojo productpojo = new ProductPojo();
+        productpojo.setName(name);
+        productpojo.setType(type);
+        productpojo.setPrice(price);
+        productpojo.setUpc(upc);
+        productpojo.setShipping(shipping);
+        productpojo.setDescription(description);
+        productpojo.setManufacturer(manufacturer);
+        productpojo.setModel(model);
+        productpojo.setImage(image);
+        productpojo.setUrl(url);
 
         return SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .when()
-                .body(studentPojo)
-                .post()
+                .body(productpojo)
+                .post(EndPoints.CREATE_PRODUCT)
                 .then().log().all();
     }
 
-    @Step("Getting the Student information with firstName : {0}")
-    public HashMap<String, Object> getStudentInfoByFirstName(String firstName) {
-        String s1 = "findAll{it.firstName == '";
-        String s2 = "'}.get(0)";
-
-        return SerenityRest.given()
+    @Step("Read the Product with Id: {0}")
+    public HashMap<String, Object> readProduct(int productId) {
+        return SerenityRest.given().log().all()
                 .when()
-                .get(EndPoints.GET_ALL_STUDENT)
+                .pathParam("productID", productId)
+                .get(Path.PRODUCTS + EndPoints.GET_SINGLE_PRODUCT_BY_ID)
                 .then().statusCode(200)
-                .extract()
-                .path(s1 + firstName + s2);
+                .extract().path("");
     }
 
-    @Step("Updating student information with studentId : {0}, firstName : {1}, lastName : {2}, email : {3}, programme : {4} and courses : {5}")
-    public ValidatableResponse updateStudent(int studentId, String firstName, String lastName,
-                                             String email, String programme, List<String> courseList) {
-        StudentPojo studentPojo = new StudentPojo();
-        studentPojo.setFirstName(firstName);
-        studentPojo.setLastName(lastName);
-        studentPojo.setEmail(email);
-        studentPojo.setProgramme(programme);
-        studentPojo.setCourses(courseList);
+    @Step("Update the product with Id: {0}, name: {1}, type: {2}, price: {3}, upc: {4}, shipping: {5}, description: {6}," +
+            "manufacturer: {7}, model: {8}, image: {9}, url: {10}")
+    public ValidatableResponse updateProduct(int productId, String name, String type, double price, String upc, int shipping,
+                                                 String description, String manufacturer, String model, String image, String url) {
+        ProductPojo productPojo = new ProductPojo();
+        productPojo.setName(name);
+        productPojo.setType(type);
+        productPojo.setPrice(price);
+        productPojo.setUpc(upc);
+        productPojo.setShipping(shipping);
+        productPojo.setDescription(description);
+        productPojo.setManufacturer(manufacturer);
+        productPojo.setModel(model);
+        productPojo.setUrl(url);
+        productPojo.setImage(image);
 
         return SerenityRest.given().log().all()
-                .header("Content-Type", "application/json")
-                .pathParam("studentID", studentId)
-                .body(studentPojo)
+                .contentType(ContentType.JSON)
+                .pathParam("productID", productId)
+                .body(productPojo)
                 .when()
-                .put(EndPoints.UPDATE_STUDENT_BY_ID)
+                .patch(Path.PRODUCTS + EndPoints.UPDATE_PRODUCT_BY_ID)
                 .then().log().all();
     }
 
-    @Step("Deleting student information with studentId : {0}")
-    public ValidatableResponse deleteStudent(int studentId){
+    @Step("Delete the product with Id: {0}")
+
+    public ValidatableResponse deleteProduct(int productId) {
         return SerenityRest.given().log().all()
-                .pathParam("studentID", studentId)
+                .pathParam("productID", productId)
                 .when()
-                .delete(EndPoints.DELETE_STUDENT_BY_ID)
+                .delete(Path.PRODUCTS + EndPoints.DELETE_PRODUCT_BY_ID)
                 .then();
     }
 
-    @Step("Getting student information with studentId : {0}")
-    public ValidatableResponse getStudentInfoById(int studentId){
-        return SerenityRest.given().log().all()
-                .pathParam("studentID", studentId)
-                .when()
-                .get(EndPoints.GET_SINGLE_STUDENT_BY_ID)
-                .then();
-    }
+
 }
