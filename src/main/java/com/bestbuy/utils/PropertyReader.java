@@ -3,9 +3,6 @@ package com.bestbuy.utils;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-/**
- * Created by Jay
- */
 public class PropertyReader {
 
     /*Rules fo implementing singleton design pattern
@@ -18,9 +15,7 @@ public class PropertyReader {
 
     //Create Private constructor Because of prevent the Instantiation of class
     private PropertyReader() {
-
     }
-
     /**
      * This method will return instance of PropertyReader class
      */
@@ -30,7 +25,6 @@ public class PropertyReader {
         }
         return propInstance;
     }
-
     /**
      * This method will read property from property file
      */
@@ -49,5 +43,4 @@ public class PropertyReader {
         }
         return null;
     }
-
 }

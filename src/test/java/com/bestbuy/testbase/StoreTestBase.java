@@ -6,7 +6,6 @@ import org.junit.BeforeClass;
 
 public class StoreTestBase {
 
-
     public static PropertyReader propertyReader;
 
     @BeforeClass
@@ -14,8 +13,6 @@ public class StoreTestBase {
         propertyReader = PropertyReader.getInstance();
         RestAssured.baseURI = propertyReader.getProperty("baseUrl");
         RestAssured.port = Integer.parseInt(propertyReader.getProperty("port"));
-       // RestAssured.basePath = Path.STORES;
     }
-
 
 }

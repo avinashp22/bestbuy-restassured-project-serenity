@@ -9,9 +9,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import java.util.HashMap;
-
 import static org.hamcrest.Matchers.hasValue;
 
 @RunWith(SerenityRunner.class)
@@ -28,10 +26,11 @@ public class StoresCRUDTest extends StoreTestBase {
     static double lat = 51.57620;
     static double lng = 11.2234;
     static String hours = "Mon: 9-9; Tue: 9-9; Wed: 9-9; Thurs: 9-9; Fri: 9-9; Sat: 9-9; Sun: 11-4";
+
     @Steps
     StoreSteps steps;
 
-    @Title("This will Create new Store")
+    @Title("This will Create the Store")
     @Test
     public void T1() {
         ValidatableResponse response = steps.createStore(name, type, address, address2, city, state, zip, lat, lng, hours);
@@ -40,18 +39,15 @@ public class StoresCRUDTest extends StoreTestBase {
         System.out.println("Product ID : " + storeId);
     }
 
-    @Title("This will read a new Store")
+    @Title("This will read the Store")
     @Test
     public void T2() {
-
         HashMap<String, Object> storeMap = steps.readStore(storeId);
         Assert.assertThat(storeMap, hasValue(name));
         storeId = (int) storeMap.get("id");
-
     }
 
-
-    @Title("This will update store")
+    @Title("This will update the store")
     @Test
     public void T3() {
         name = "Westfeild" + TestUtils.getRandomValue();
@@ -62,12 +58,9 @@ public class StoresCRUDTest extends StoreTestBase {
         Assert.assertThat(storeMap, hasValue(name));
     }
 
-    @Title("This will delete store")
+    @Title("This will delete the store")
     @Test
     public void T4() {
-
         steps.deleteStore(storeId).statusCode(200);
-
     }
-
 }

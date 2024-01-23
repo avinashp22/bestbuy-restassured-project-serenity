@@ -13,7 +13,6 @@ public class StorePojo {
     private double lat;
     private String hours;
 
-
     public String getName() {
         return name;
     }
@@ -93,8 +92,4 @@ public class StorePojo {
     public void setHours(String hours) {
         this.hours = hours;
     }
-
-
-
-
 }

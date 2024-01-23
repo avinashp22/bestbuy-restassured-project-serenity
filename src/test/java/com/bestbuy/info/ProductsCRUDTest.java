@@ -9,10 +9,9 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import java.util.HashMap;
-
 import static org.hamcrest.Matchers.hasValue;
+
 @RunWith(SerenityRunner.class)
 public class ProductsCRUDTest extends ProductTestBase {
 
@@ -31,7 +30,7 @@ public class ProductsCRUDTest extends ProductTestBase {
     @Steps
     ProductSteps steps;
 
-    @Title("This will create new Product")
+    @Title("This will create the Product")
     @Test
     public void T1() {
         ValidatableResponse response = steps.createProduct(name, type, price, upc,
@@ -39,20 +38,17 @@ public class ProductsCRUDTest extends ProductTestBase {
         response.log().all().statusCode(201);
         productId = response.extract().path("id");
         System.out.println("Product ID : " + productId);
-
     }
 
-    @Title("This will read a new Product")
+    @Title("This will read the Product")
     @Test
         public void T2() {
-
         HashMap<String, Object> productMap = steps.readProduct(productId);
         Assert.assertThat(productMap, hasValue(name));
         productId = (int) productMap.get("id");
-
     }
 
-    @Title("This will update product")
+    @Title("This will update the product")
     @Test
     public void T3() {
         name = "Iphone" + TestUtils.getRandomValue();
@@ -61,17 +57,12 @@ public class ProductsCRUDTest extends ProductTestBase {
                 manufacturer, model, image, url).statusCode(200);
 
         HashMap<String, Object> studentMap = steps.readProduct(productId);
-
         Assert.assertThat(studentMap, hasValue(name));
     }
 
-    @Title("This will delete product")
+    @Title("This will delete the product")
     @Test
     public void T4() {
-
         steps.deleteProduct(productId).statusCode(200);
-
-
     }
-
 }
